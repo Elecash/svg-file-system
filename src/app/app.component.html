@@ -1,0 +1,13 @@
+<div>
+    <button type="button" (click)="onClickButton()">Choose file</button>
+</div>
+
+<div *ngIf="fileContents" [innerHTML]="fileContents | sanitizeHtml"></div>
+
+<div>
+    <textarea [formControl]="fileArea"></textarea>
+</div>
+
+<div>
+    <button type="button" (click)="onClickSave()">Save file (file will be overwritten)</button>
+</div>
